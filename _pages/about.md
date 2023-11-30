@@ -24,11 +24,11 @@ ul.twocol { width: 110%; }
 <li> Nanomaterials</li>
 <li> Advanced Functional Materials</li>
 <li> Machine Learning</li>
+</ul>
 
 
 Feel free to contact me, I'm happy to cooperate with someone with ideas!
 
-</ul>
 
 
 
