@@ -37,7 +37,7 @@ Single-atom catalysts (SACs) are considered one of the promising strategies to a
 Herein, we have developed single-atom cobalt embedded in N-doped carbon nanoboxes as high-efficiency bifunctional electrocatalysts for overall water splitting in alkaline/acidic electrolytes. Due to the reliable metal-nonmetal bonds between the Co single atom and the substrate carbon, where the uniformly dispersed Co atoms could be effectively and stably riveted on the carbon nanoboxes, and the as-prepared electrocatalyst possesses high mass loading of single Co atoms (~10.2 wt%). In addition, the systematic X-ray absorption fine structure (XAFS) and density functional theory (DFT) calculations were performed to further investigate the relationship between coordination number, configuration and electrocatalytic properties of Co single atoms and N atoms. Based on the above results, the presence of Co atoms induces the formation of pyrr-N and possesses Co@CNB-N<sub>4</sub> configuration with HER overpotential of 45 mV, comparable to Pt/C (20 wt%). As for OER, Co@CNB-N<sub>4</sub> still has satisfactory catalytic performance, superior to the benchmark catalyst RuO<sub>2</sub>. 
 <p style="margin-top: -2.5%;">
 Thus, this work builds a bridge to understand the impact of metal single atoms and substrate configuration on catalytic performance and opens a door to the successful synthesis of SACs with high loading of non-precious metal atoms, high atomic utilization and electrocatalytic activity.
-</div></li></div>
+
 
 <div id="4">
 <li> <b>Constructing Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction doped with Yb<sup>3+</sup> ions as accelerating charge carriers transfer channel to enhance photocatalytic activity</b>,  <em>Solid State Sciences</em>, 139 (2023) 107151 
@@ -48,7 +48,7 @@ The Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heteroj
 When the mole ratio of Yb<sup>3+</sup> doping in the complex is 1%, the coexistence and recombination of α-Bi<sub>2</sub>O<sub>3</sub>, β-Bi<sub>2</sub>O<sub>3</sub> and Bi<sub>2</sub>O<sub>3</sub> lead to the formation of triple heterojunction and the establishment of a unique electronic transmission channel, which promote the separation of photogenerated carriers. At the same time, Yb<sup>3+</sup> ions have unique electronic transition characteristics, which effectively broaden the spectral response range of the Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> photocatalyst, and also improve the photocatalytic activity. 
 <p style="margin-top: -2.5%;">
 Thanks to its optimized performance, the best efficiency of the Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction photocatalyst in removing gaseous Hg0 under visible light can reach 76.73%, which is much higher than that of its pure component. Finally, the mechanism of high efficiency catalytic oxidation was proposed by combining rare earth ion doping with semiconductor recombination to construct heterojunction catalysts with a wide spectral response. This work provides a new method for designing efficient photocatalysts.
-</div></li></div>
+
 
 
 <div id="3">
@@ -71,7 +71,7 @@ The exploration of high-efficiency and reliable non-precious metal electrocataly
 By controlling the solvent, two kinds of regular and one kind of irregular pure ɑlpha-Nickel hydroxide were successfully synthesized. Two regular catalysts’ catalytic activity can be enhanced by the level of regularity increasing. Interestingly, as the increase of irregularity, compared with nanosphere-like Ni(OH)<sub>2</sub>, nanoparticle-sphere-like Ni(OH)<sub>2</sub> sample’s specific surface areas, number of ion transport channels, and reaction kinetics performance also raise, which actually enhance catalytic activity. In a word, the most irregular Ni(OH)<sub>2</sub>-NPS has the best electrocatalytic activity (η = 250 mV) and the lowest Tafel slope (73.9 mV dec-1), and the outstanding constancy (8 h) at 1.48 V (vs. RHE) could be achieved, meanwhile, the benchmark RuO<sub>2</sub> (340 mV and 87.4 mV dec<sup>-1</sup>) is also inferior to Ni(OH)<sub>2</sub>-NPS. </p>
 <p style="margin-top: -2.5%;">
 By comparing three Ni(OH)<sub>2</sub> samples, this work provides the new single transition metal system about 3D materials and facilitate the development of highly efficient water oxidation catalysts. </p>
-</div></li></div>
+
 
 
 <div id="1">
@@ -83,8 +83,6 @@ Oxygen evolution reaction (OER), as a part reaction of the overall water splitti
 In this work, we have prepared ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> by a two-step thermal peeling method and synthesized Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> com<sup></sup>posite by a simple one-step solvothermal method. Benefiting from the layered g-C<sub>3</sub>N<sub>4</sub> as substrate, the overpotential of Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> composite was just 240 mV at 10 mA cm<sup>−2</sup>, which gives an unexpected improvement in the electrochemical performance of the composite samples compared to pure Ni(OH)<sub>2</sub> (η = 460 mV). Additionally, the formation of heterojunction effectively reduces the resistance to electron transport in OER, the resistance of Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> (Rct = 38.8 ) is far smaller than those of bare Ni(OH)<sub>2</sub> (Rct = 41.6 ) and layered g-C<sub>3</sub>N<sub>4</sub> (Rct = 43.6 ) at the open circuit potential. Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> composite samples display outstanding electrochemical stability, maintaining 85% of initial current density for 12 h. 
 <p style="margin-top: -2.5%;">
 Moreover, density functional theory (DFT) demonstrates that G3 of Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite (η = 0.46 V) is much lower than that of bare Ni(OH)<sub>2</sub> (η = 0.64 V). These undeniable results demonstrate that Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite materials is promising alternative materials to replace precious metal-based OER electrocatalysts in the field of water splitting
-</div></li></div>
-</ol>
 
 
 
