@@ -27,7 +27,7 @@ ul.twocol { width: 110%; }
 </ul>
 
 
-Feel free to contact me, I'm happy to cooperate with someone with ideas!
+Feel free to contact me, I'm happy to cooperate with someone who have ideas!
 
 
 
