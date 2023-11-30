@@ -29,7 +29,7 @@ author_profile: true
 <ol reversed>
 
 <div id="5">
-<li> <b>Cobalt single atom anchored on N-doped carbon nanoboxes as typical single-atom catalysts (SACs) for boosting the overall water splitting</b>,  <em>Chemical Engineering Journal</em>, 458 (2023) 141435 [[pdf](/files/5.pdf)] 
+<li> <b>Cobalt single atom anchored on N-doped carbon nanoboxes as typical single-atom catalysts (SACs) for boosting the overall water splitting</b>,  <em>Chemical Engineering Journal</em>, 458 (2023) 141435 
 <div class='button' data-content="toggle-text"><a href="#4">abstract</a></div>
 <div class='abstract'>
 Single-atom catalysts (SACs) are considered one of the promising strategies to achieve efficient energy conversion, due to their advantage of both maximum atomic utilization and minimum catalyst cost. However, finding a balance between increasing the atom loading and preventing the agglomeration of metal single atoms is a current research hotspot.
@@ -40,7 +40,7 @@ Thus, this work builds a bridge to understand the impact of metal single atoms a
 </div></li></div>
 
 <div id="4">
-<li> <b>Constructing Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction doped with Yb<sup>3+</sup> ions as accelerating charge carriers transfer channel to enhance photocatalytic activity</b>,  <em>Solid State Sciences</em>, 139 (2023) 107151 [[pdf](/files/4.pdf)] 
+<li> <b>Constructing Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction doped with Yb<sup>3+</sup> ions as accelerating charge carriers transfer channel to enhance photocatalytic activity</b>,  <em>Solid State Sciences</em>, 139 (2023) 107151 
 <div class='button' data-content="toggle-text"><a href="#4">abstract</a></div>
 <div class='abstract'>
 The Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction photocatalyst was successfully prepared by the EG assisted hydrothermal method and the calcination method. Bi2O3 has a variety of crystal phase structures. Through characterizations and DFT theoretical calculations, it is shown that different proportion of Yb3+ doping makes the lattice phase transition of Bi<sub>2</sub>O<sub>3</sub>. 
@@ -52,7 +52,7 @@ Thanks to its optimized performance, the best efficiency of the Yb<sup>3+</sup>-
 
 
 <div id="3">
-<li> <b>Bimetallic Ni-Hf Tellurides as an Advanced Electrocatalyst for Overall Water Splitting with Layered g-C<sub>3</sub>N<sub>4</sub> Modification</b>, <em>Materials Today Energy</em>, 26 (2022) 101002 [[pdf](/files/3.pdf)]  
+<li> <b>Bimetallic Ni-Hf Tellurides as an Advanced Electrocatalyst for Overall Water Splitting with Layered g-C<sub>3</sub>N<sub>4</sub> Modification</b>, <em>Materials Today Energy</em>, 26 (2022) 101002 
 <div class='button' data-content="toggle-text"><a href="#3">abstract</a></div>
 <div class='abstract'>
 Impressive developments have been achieved in the field of bifunctional electrocatalysts for the overall water splitting in alkaline and weak alkaline electrolytes, but still challenging. Herein, we have coupled the early and later transition metals to form novel bimetallic tellurides electrocatalyst for overall water splitting by simple one-step hydrothermal. 
@@ -63,7 +63,7 @@ This work provides a novel strategy for the design of bifunctional transition me
 
 
 <div id="2'">
-<li> <b>3D Nanostructured Nickel Hydroxide as An Efficient Electrocatalyst for Oxygen Evolution Reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 [[pdf](/files/2.pdf)] 
+<li> <b>3D Nanostructured Nickel Hydroxide as An Efficient Electrocatalyst for Oxygen Evolution Reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 
 <div class='button' data-content="toggle-text"><a href="#2'">abstract</a></div>
 <div class='abstract'>
 The exploration of high-efficiency and reliable non-precious metal electrocatalysts for overall water splitting is greatly vital and challenging for scientists to explore the physical structure effects with OER catalysts. Herein, we firstly developed three-dimensional ɑlpha-Nickel hydroxide as an advantageous electrocatalyst towards OER by a simple solvothermal method. 
@@ -75,7 +75,7 @@ By comparing three Ni(OH)<sub>2</sub> samples, this work provides the new single
 
 
 <div id="1">
-<li> <b>Ni(OH)<sub>2</sub> microspheres in situ self-grown on ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> as a heterojunction electrocatalyst for oxygen evolution reaction</b>, <em>Electrochimica Acta</em>, 400 (2021) 139473 [[pdf](/files/1.pdf)] 
+<li> <b>Ni(OH)<sub>2</sub> microspheres in situ self-grown on ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> as a heterojunction electrocatalyst for oxygen evolution reaction</b>, <em>Electrochimica Acta</em>, 400 (2021) 139473
 <div class='button' data-content="toggle-text"><a href="#1">abstract</a></div>
 <div class='abstract'>
 Oxygen evolution reaction (OER), as a part reaction of the overall water splitting, is deemed as a prospective technology for large-scale energy storage. However, the sluggish kinetics (large overpotential) and the expensive cost of noble metal-based electrocatalysts (RuO<sub>2</sub> and IrO<sub>2</sub>) restrain the widespread usage of OER. Hence, the discovery of non-precious metal-based electrocatalysts with tiny overpotential, satisfactory current density and outstanding stability has become urgent. 
