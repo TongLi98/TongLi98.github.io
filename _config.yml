@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Mohammad M. Ahmadpanah"
+title                    : "Tong Li's personal homepage"
 title_separator          : "-"
-name                     : &name "Mohammad M. Ahmadpanah"
-description              : &description "The Personal Website of Mohammad M. Ahmadpanah | صفحه شخصی محمد احمدپناه"
-url                      : "" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Tong Li"
+description              : &description "The Personal Website of Tong Li"
+url                      : https://TongLi98.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "smahmadpanah/smahmadpanah.github.io"
+repository               : ""
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -57,9 +57,9 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter "smahmadpanah"
+  username               : #&twitter ""
 facebook:
-  username               : smahmadpanah
+  username               : 
   app_id                 :
   publisher              :
 og_image                 :  # Open Graph/Twitter default site image
@@ -80,39 +80,39 @@ analytics:
 
 # Site Author
 author:
-  name             : "Mohammad M. Ahmadpanah"
-  avatar           : "profile.png"
-  bio              : "PhD Student in Information&nbsp;Security<br><a href='https://www.chalmers.se/en'><img src='/images/chalmers.png'></a>&nbsp;&nbsp;<a href='https://aut.ac.ir/en'><img src='/images/aut.png'></a>"
-  location         : "https://goo.gl/maps/ZxJrHZxG96hMjhjS8"
+  name             : "Tong Li"
+  avatar           : "litong.png"
+  bio              : "Make the world a little different"
+  location         : "https://www.google.com/maps/place/Montreal,+QC,+Canada/@45.5593046,-73.8766819,11z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a541c64b70d:0x654e3138211fefef!8m2!3d45.5018869!4d-73.5673919!16zL20vMDUycDc?hl=en&entry=ttu"
   #employer        : "chalmers"
   #pubmed          : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=MvbjHQsAAAAJ&hl=en"
-  gmail            : "smahmadpanah@gmail.com"
-  email            : "mohammad.ahmadpanah@chalmers.se"
-  #email           : "smahmadpanah@aut.ac.ir"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  #googlescholar   : "https://scholar.google.com/citations?user=MvbjHQsAAAAJ&hl=en"
+  #gmail           : "smahmadpanah@gmail.com"
+  email            : "tongli523@163.com"
+  #email           : ""
+  #researchgate    :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   #bitbucket       : 
-  skype            : "smahmadpanah"
-  phone            : "+46317721114"
-  telegram         : "smahmadpanah"
-  facebook         : "smahmadpanah"
-  foursquare       :
-  github           : "smahmadpanah"
-  google_plus      : 
-  keybase          :
-  instagram        : "smahmadpanah"
+  #skype           : ""
+  #phone           : ""
+  #telegram        : ""
+  #facebook        : ""
+  #foursquare      :
+  github           : "TongLi98"
+  #google_plus     : 
+  #keybase         :
+  #instagram       : "smahmadpanah"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "smahmadpanah"
+ #linkedin         : "smahmadpanah"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       : "smahmadpanah"
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "smahmadpanah"
-  spotify          : "smahmadpanah"
+  #twitter         : "smahmadpanah"
+  #spotify         : "smahmadpanah"
   weibo            :
   xing             :
   youtube          : #"Vv0cixelYXcPL1WJAHo_uQ"
