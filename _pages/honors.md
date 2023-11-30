@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-<<ul>
+<ul>
 <li> Shanghai Outstanding Graduate Student, China, 2023.03</li>
 
 <li> Outstanding Graduate Students at University Level, China, 2023.03</li>
