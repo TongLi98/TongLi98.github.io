@@ -3,20 +3,17 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Teaching"
-    url: /teaching/
-
-  - title: "Honors and Activities"
+  - title: "Honors"
     url: /honors/
 
   - title: "CV"
     url: /cv/
 
-  - title: "Lecture Notes"
-    url: /lecturenotes/
+  - title: "Hobbies"
+    url: /hobbies/
 
   - title: "Photos"
     url: /gothenburgwithme/
 
-  - title: "Others"
-    url: /others/  
+  - title: "News"
+    url: /news/  
