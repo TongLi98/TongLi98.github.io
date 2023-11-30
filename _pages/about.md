@@ -18,6 +18,8 @@ ul.twocol { width: 110%; }
 <EMPTY LINE>
 <b>Hi!</b> This is Tong Li, a PhD candidate student from INRS. I am very fortunate to be advised by Prof. Ma of Nanomaterials Chemistry and Advanced Optical Characterization Lab from Center of Energy Materials and Telecommunications. My research interest includes:
 <ul class='twocol' style="margin-top: -1%;" markdown='1'>
+<EMPTY LINE>
+<EMPTY LINE>
 <li> Green Energy</li>
 <li> Nanomaterials</li>
 <li> Advanced Functional Materials</li>
