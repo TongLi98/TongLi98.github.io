@@ -28,106 +28,61 @@ author_profile: true
 
 <ol reversed>
 
-<div id="7">
-<li> <b>LazyTAP: On-Demand Data Minimization for Trigger-Action Applications</b>, <em><a href="https://www.ieee-security.org/TC/SP2023/program-papers.html">S&P'23</a></em> [<a href="/papers/sp23.pdf">pdf</a>] [<a href="https://www.cse.chalmers.se/research/group/security/lazytap/">link</a>] [<a href="https://www.youtube.com/watch?v=TQI11hNE2KA">teaser</a>] 
-<br><i>Mohammad M. Ahmadpanah</i>, Daniel Hedin, and Andrei Sabelfeld
-<div class='button' data-content="toggle-text"><a href="#7">abstract</a></div>
-<div class='abstract'>
-Trigger-Action Platforms (TAPs) empower applications (apps) for connecting otherwise unconnected devices and services. The current TAPs like IFTTT require trigger services to push excessive amounts of sensitive data to the TAP regardless of whether the data will be used in the app, at odds with the principle of data minimization. Furthermore, the rich features of modern TAPs, including IFTTT queries to support multiple trigger services and nondeterminism of apps, have been out of the reach of previous data minimization approaches like minTAP. This paper proposes LazyTAP, a new paradigm for fine-grained on-demand data minimization. LazyTAP breaks away from the traditional push-all approach of coarse-grained data over-approximation. Instead, LazyTAP pulls input data on-demand, once it is accessed by the app execution. Thanks to the fine granularity, LazyTAP enables tight minimization that naturally generalizes to support multiple trigger services via queries and is robust with respect to nondeterministic behavior of the apps. We achieve seamlessness for third-party app developers by leveraging laziness to defer computation and proxy objects to load necessary remote data behind the scenes as it becomes needed. We formally establish the correctness of LazyTAP and its minimization properties with respect to both IFTTT and minTAP. We implement and evaluate LazyTAP on app benchmarks showing that on average LazyTAP improves minimization by 95% over IFTTT and by 38% over minTAP, while incurring a tolerable performance overhead.
-</div></li></div>
-
-<div id="6">
-<li> <b>Securing Software in the Presence of Third-Party Modules</b>, <em>Licentiate thesis</em>, 2021 [<a href="/papers/licentiate.pdf">pdf</a>] [<a href="https://research.chalmers.se/en/publication/525880">link</a>] [<a href="https://youtu.be/0Mdj-sNxqXU">video</a>]
-  <br>Supervisor: Andrei Sabelfeld, Co-supervisor: Daniel Hedin, Opponent: Deian Stefan, Examiner: David Sands
-<div class='button' data-content="toggle-text"><a href="#6">abstract</a></div>
-<div class='abstract'>
-Modular programming is a key concept in software development where the program consists of code modules that are designed and implemented independently. This approach accelerates the development process and enhances scalability of the final product. Modules, however, are often written by third parties, aggravating security concerns such as stealing confidential information, tampering with sensitive data, and executing malicious code.
-<p style="margin-top: -0.1%;">
-Trigger-Action Platforms (TAPs) are concrete examples of employing modular programming. Any user can develop TAP applications by connecting trigger and action services, and publish them on public repositories. In the presence of malicious application makers, users cannot trust applications written by third parties, which can threaten users’ and platform’s security.</p>
-<p style="margin-top: -2.5%;">
-We present SandTrap, a novel runtime monitor for JavaScript that can be used to securely integrate third-party applications. SandTrap enforces fine-grained access control policies at the levels of module, API, value, and context. We instantiate SandTrap to IFTTT, Zapier, and Node-RED, three popular JavaScript-driven TAPs, and illustrate how it enforces various policies on a set of benchmarks while incurring a tolerable runtime overhead. We also prove soundness and transparency of the monitoring framework on an essential model of Node-RED.</p>
-<p style="margin-top: -2.5%;">
-Furthermore, nontransitive policies have been recently introduced as a natural fit for coarse-grained information-flow control where labels are specified at the level of modules. The flow relation does not need to be transitive, resulting in nonstandard noninterference and enforcement mechanism. We develop a lattice encoding to prove that nontransitive policies can be reduced to classical transitive policies. We also devise a lightweight program transformation that leverages standard flow-sensitive information-flow analyses to enforce nontransitive policies more permissively.</p>
-</div></li></div>
-
 <div id="5">
-<li> <b>Securing Node-RED Applications</b>, <em>Protocols, Strands, and Logic: Festschrift in honor of Joshua Guttman'21</em> [<a href="/papers/joshua21.pdf">pdf</a>] [<a href="https://link.springer.com/book/10.1007/978-3-030-91631-2">link</a>] [<a href="https://youtu.be/0qKo0hNt2Ek">video</a>]
-<br><i>Mohammad M. Ahmadpanah</i>, Musard Balliu, Daniel Hedin, Lars Eric Olsson, and Andrei Sabelfeld
-<br><a class='button' data-content="toggle-text" href="#5">abstract</a>
-<div class='abstract'>
-Trigger-Action Platforms (TAPs) play a vital role in fulfilling the promise of the Internet of Things (IoT) by seamlessly connecting otherwise unconnected devices and services. While enabling novel and exciting applications across a variety of services, security and privacy issues must be taken into consideration because TAPs essentially act as persons-in-the-middle between trigger and action services. The issue is further aggravated since the triggers and actions on TAPs are mostly provided by third parties extending the trust beyond the platform providers.
-<p style="margin-top: -0.1%;">
-Node-RED, an open-source JavaScript-driven TAP, provides the opportunity for users to effortlessly employ and link nodes via a graphical user interface. Being built upon Node.js, third-party developers can extend the platform's functionality through publishing nodes and their wirings, known as flows.</p>
-<p style="margin-top: -2.5%;">
-This paper proposes an essential model for Node-RED, suitable to reason about nodes and flows, be they benign, vulnerable, or malicious. We expand on attacks discovered in recent work, ranging from exfiltrating data from unsuspecting users to taking over the entire platform by misusing sensitive APIs within nodes. We present a formalization of a runtime monitoring framework for a core language that soundly and transparently enforces fine-grained allowlist policies at module-, API-, value-, and context-level. We introduce the monitoring framework for Node-RED that isolates nodes while permitting them to communicate via well-de ned API calls complying with the policy specified for each node.</p>
-</div></li></div>
-
-
-
-
-
-<div id="4">
-<li> <b>Nontransitive Policies Transpiled</b>, <em><a href="http://www.ieee-security.org/TC/EuroSP2021/accepted.html">EuroS&P'21</a></em> [<a href="/papers/eurosp21.pdf">pdf</a>] [<a href="https://www.cse.chalmers.se/research/group/security/ntni/">link</a>] [<a href="https://youtu.be/mAMgyhWL-AE?t=320">short talk</a>]
-<br><i>Mohammad M. Ahmadpanah</i>, Aslan Askarov, and Andrei Sabelfeld
+<li> <b>Cobalt single atom anchored on N-doped carbon nanoboxes as typical single-atom catalysts (SACs) for boosting the overall water splitting</b>,  <em>Chemical Engineering Journal</em>, 458 (2023) 141435 [[pdf](/files/publications/5.pdf)]
 <div class='button' data-content="toggle-text"><a href="#4">abstract</a></div>
 <div class='abstract'>
-Nontransitive Noninterference (NTNI) and Nontransitive Types (NTT) are a new security condition and enforcement for policies, which in contrast to Denning's classical lattice model, assume no transitivity of the underlying flow relation. Nontransitive security policies are a natural fit for coarse-grained information-flow control where labels are specified at module rather than variable level of granularity.
+Single-atom catalysts (SACs) are considered one of the promising strategies to achieve efficient energy conversion, due to their advantage of both maximum atomic utilization and minimum catalyst cost. However, finding a balance between increasing the atom loading and preventing the agglomeration of metal single atoms is a current research hotspot.
 <p style="margin-top: -0.1%;">
-While the nontransitive and transitive policies pursue different goals and have different intuitions, this paper demonstrates that nontransitive noninterference can be in fact reduced to classical transitive noninterference. We develop a power-lattice encoding that establishes a precise relation between NTNI and classical noninterference. Our results make it possible to clearly position the new NTNI characterization with respect to the large body of work on noninterference. Further, we devise a lightweight program transformation that enables us to leverage standard flow-sensitive information-flow analyses to enforce nontransitive policies. We demonstrate several immediate benefits of our approach, both theoretical and practical. First, we improve the permissiveness over (while retaining the soundness of) the nonstandard NTT enforcement. Second, our results naturally generalize to a language with intermediate input and outputs. Finally, we demonstrate the practical benefits by leveraging state-of-the-art flow-sensitive tool JOANA to enforce nontransitive policies for Java programs.</p>
+Herein, we have developed single-atom cobalt embedded in N-doped carbon nanoboxes as high-efficiency bifunctional electrocatalysts for overall water splitting in alkaline/acidic electrolytes. Due to the reliable metal-nonmetal bonds between the Co single atom and the substrate carbon, where the uniformly dispersed Co atoms could be effectively and stably riveted on the carbon nanoboxes, and the as-prepared electrocatalyst possesses high mass loading of single Co atoms (~10.2 wt%). In addition, the systematic X-ray absorption fine structure (XAFS) and density functional theory (DFT) calculations were performed to further investigate the relationship between coordination number, configuration and electrocatalytic properties of Co single atoms and N atoms. Based on the above results, the presence of Co atoms induces the formation of pyrr-N and possesses Co@CNB-N<sub>4</sub> configuration with HER overpotential of 45 mV, comparable to Pt/C (20 wt%). As for OER, Co@CNB-N<sub>4</sub> still has satisfactory catalytic performance, superior to the benchmark catalyst RuO<sub>2</sub>. 
+<p style="margin-top: -2.5%;">
+Thus, this work builds a bridge to understand the impact of metal single atoms and substrate configuration on catalytic performance and opens a door to the successful synthesis of SACs with high loading of non-precious metal atoms, high atomic utilization and electrocatalytic activity.
 </div></li></div>
+
+<div id="4">
+<li> <b>Constructing Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction doped with Yb<sup>3+</sup> ions as accelerating charge carriers transfer channel to enhance photocatalytic activity</b>,  <em>Solid State Sciences</em>, 139 (2023) 107151 [[pdf](/files/publications/4.pdf)] 
+<div class='button' data-content="toggle-text"><a href="#4">abstract</a></div>
+<div class='abstract'>
+The Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction photocatalyst was successfully prepared by the EG assisted hydrothermal method and the calcination method. Bi2O3 has a variety of crystal phase structures. Through characterizations and DFT theoretical calculations, it is shown that different proportion of Yb3+ doping makes the lattice phase transition of Bi<sub>2</sub>O<sub>3</sub>. 
+<p style="margin-top: -0.1%;">
+When the mole ratio of Yb<sup>3+</sup> doping in the complex is 1%, the coexistence and recombination of α-Bi<sub>2</sub>O<sub>3</sub>, β-Bi<sub>2</sub>O<sub>3</sub> and Bi<sub>2</sub>O<sub>3</sub> lead to the formation of triple heterojunction and the establishment of a unique electronic transmission channel, which promote the separation of photogenerated carriers. At the same time, Yb<sup>3+</sup> ions have unique electronic transition characteristics, which effectively broaden the spectral response range of the Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> photocatalyst, and also improve the photocatalytic activity. 
+<p style="margin-top: -2.5%;">
+Thanks to its optimized performance, the best efficiency of the Yb<sup>3+</sup>-Bi<sub>2</sub>O<sub>3</sub>/BiOIO<sub>3</sub> triple heterojunction photocatalyst in removing gaseous Hg0 under visible light can reach 76.73%, which is much higher than that of its pure component. Finally, the mechanism of high efficiency catalytic oxidation was proposed by combining rare earth ion doping with semiconductor recombination to construct heterojunction catalysts with a wide spectral response. This work provides a new method for designing efficient photocatalysts.
+</div></li></div>
+
 
 <div id="3">
-<li> <b>SandTrap: Securing JavaScript-driven Trigger-Action Platforms</b>, <em><a href="https://www.usenix.org/conference/usenixsecurity21/presentation/ahmadpanah">USENIX Security'21</a></em> [<a href="/papers/usenix21.pdf">pdf</a>] [<a href="https://www.cse.chalmers.se/research/group/security/SandTrap/">link</a>]
-<br><i>Mohammad M. Ahmadpanah</i>, Daniel Hedin, Musard Balliu, Lars Eric Olsson, and Andrei Sabelfeld
-<br><a class='button' data-content="toggle-text" href="#3">abstract</a>
+<li> <b>Bimetallic Ni-Hf Tellurides as an Advanced Electrocatalyst for Overall Water Splitting with Layered g-C<sub>3</sub>N<sub>4</sub> Modification</b>, <em>Materials Today Energy</em>, 26 (2022) 101002 [[pdf](/files/publications/3.pdf)] 
+<div class='button' data-content="toggle-text"><a href="#3">abstract</a></div>
 <div class='abstract'>
-Trigger-Action Platforms (TAPs) seamlessly connect a wide variety of otherwise unconnected devices and services, ranging from IoT devices to cloud services and social networks. TAPs raise critical security and privacy concerns because a TAP is effectively a “person-in-the-middle” between trigger and action services. Third-party code, routinely deployed as “apps” on TAPs, further exacerbates these concerns. This paper focuses on JavaScript-driven TAPs. We show that the popular IFTTT and Zapier platforms and an open-source alternative Node-RED are susceptible to attacks ranging from exfiltrating data from unsuspecting users to taking over the entire platform. We report on the changes by the platforms in response to our findings and present an empirical study to assess the implications for Node-RED. Motivated by the need for a secure yet flexible way to integrate third-party JavaScript apps, we propose SandTrap, a novel JavaScript monitor that securely combines the Node.js vm module with fully structural proxy-based two-sided membranes to enforce fine-grained access control policies. To aid developers, SandTrap includes a policy generation mechanism. We instantiate SandTrap to IFTTT, Zapier, and Node-RED and illustrate on a set of benchmarks how SandTrap enforces a variety of policies while incurring a tolerable runtime overhead.
-</div></li></div>
-
-
-<div id="2">
-<li> <b>Improving Multi-Execution-based Mechanisms for Enforcing Information Flow Policies</b>, <em>Master's thesis</em>, 2017 [<a href="https://github.com/smahmadpanah/MScDocuments/blob/master/Thesis/Thesis.pdf">pdf</a>] [<a href="https://github.com/smahmadpanah/MScDocuments/tree/master/Thesis">link</a>]
-  <br>Supervisor: Mehran S. Fallah, Opponents: Mehdi Shajari and Ramtin Khosravi
-<div class='button' data-content="toggle-text"><a href="#2">abstract</a></div>
-<div class='abstract'>
-Secure Multi-Execution (SME) proves to be a successful technique for
-enforcing noninterference. A security mechanism based on SME schedules and
-executes multiple copies of a given program, one copy for each security
-level, and controls the input/output operations of the copies in a certain
-manner. A main challenge in devising such mechanisms is to achieve precision,
-which basically stipulates that changes to the executions of secure programs
-must be as minimal as possible. Although research in this area has yielded
-interesting results, the proposed mechanisms do not attain an acceptable
-level of precision even for the security policies that are weakly sensitive
-to the timing behavior of programs. This paper proposes a sound and highly
-precise mechanism for a strong timing-sensitive noninterference. Using a
-specific round-robin-like scheduler, the mechanism indeed arrives at a
-highest level of precision demanding that the relative order of input/output
-events from different security levels should be preserved.
-</div></li></div>
+Impressive developments have been achieved in the field of bifunctional electrocatalysts for the overall water splitting in alkaline and weak alkaline electrolytes, but still challenging. Herein, we have coupled the early and later transition metals to form novel bimetallic tellurides electrocatalyst for overall water splitting by simple one-step hydrothermal. 
+<p style="margin-top: -0.1%;">
+Owing to the large specific surface area of g-C<sub>3</sub>N<sub>4</sub> as substrates, the as-prepared NiTe-HfTe<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> displays appealing electrocatalytic activity and satisfactory stability in both oxygen evolution reaction (OER) and hydrogen evolution reaction (HER) in alkaline media. Furthermore, the electrolytic cell with two electrodes assembled by NiTe-HfTe<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> demonstrates the same excellent performance in overall water splitting. The strong electronegativity of Te and the synergistic effect between Ni and Hf together contribute to the overall water splitting process. 
+<p style="margin-top: -2.5%;">
+This work provides a novel strategy for the design of bifunctional transition metal based electrocatalyst to achieve efficient and stable overall water splitting. 
 
 
 <div id="2'">
-<li> <b>Dynamic Enforcement of Security Hyperproperties: A Survey</b>, <em>Technical report</em>, 2016 [<a href="https://github.com/smahmadpanah/MScDocuments/blob/master/Seminar/Dynamic%20Enforcement%20of%20Security%20Hyperproperties-SeminarReport.pdf">pdf</a>]
-<br>Supervisor: Mehran S. Fallah
+<li> <b>3D Nanostructured Nickel Hydroxide as An Efficient Electrocatalyst for Oxygen Evolution Reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 [[pdf](/files/publications/2.pdf)] 
 <div class='button' data-content="toggle-text"><a href="#2'">abstract</a></div>
 <div class='abstract'>
-Security policies can be categorized as properties and non-properties. Information flow control is one of the important confidentiality and integrity policies. The difference between expressing policies using only one or more than one trace entails several enforcement mechanisms. 
+The exploration of high-efficiency and reliable non-precious metal electrocatalysts for overall water splitting is greatly vital and challenging for scientists to explore the physical structure effects with OER catalysts. Herein, we firstly developed three-dimensional ɑlpha-Nickel hydroxide as an advantageous electrocatalyst towards OER by a simple solvothermal method. 
 <p style="margin-top: -0.1%;">
-Two main types of security enforcement mechanisms are static and dynamic. The common feature of static mechanisms is being conservative due to source-code static analysis before the execution. On the other side, runtime monitoring is a well-known technique among dynamic mechanisms. Recently, permissiveness of dynamic techniques for enforcing information flow policies, compared to static analysis, has attracted increasing attraction. Hybrid approaches make use of source-code analysis as additional information on other possible executions of the program under the monitor. Security enforcement mechanisms can be measured in terms of soundness, transparency, and precision. </p>
+By controlling the solvent, two kinds of regular and one kind of irregular pure ɑlpha-Nickel hydroxide were successfully synthesized. Two regular catalysts’ catalytic activity can be enhanced by the level of regularity increasing. Interestingly, as the increase of irregularity, compared with nanosphere-like Ni(OH)<sub>2</sub>, nanoparticle-sphere-like Ni(OH)<sub>2</sub> sample’s specific surface areas, number of ion transport channels, and reaction kinetics performance also raise, which actually enhance catalytic activity. In a word, the most irregular Ni(OH)<sub>2</sub>-NPS has the best electrocatalytic activity (η = 250 mV) and the lowest Tafel slope (73.9 mV dec-1), and the outstanding constancy (8 h) at 1.48 V (vs. RHE) could be achieved, meanwhile, the benchmark RuO<sub>2</sub> (340 mV and 87.4 mV dec<sup>-1</sup>) is also inferior to Ni(OH)<sub>2</sub>-NPS. </p>
 <p style="margin-top: -2.5%;">
-In this technical report, we review the notion of security policies and hyperproperties. We study a wide range of enforcement techniques, including static mechanisms, dynamic mechanisms, program rewriting, and hybrid analysis. We also review the characterization of various dynamic mechanisms and runtime monitors (with or without prior knowledge of possible behaviors of the program) in the literature with reference to enforcement paradigms and comparison factors. </p>
+By comparing three Ni(OH)<sub>2</sub> samples, this work provides the new single transition metal system about 3D materials and facilitate the development of highly efficient water oxidation catalysts. </p>
 </div></li></div>
 
+
 <div id="1">
-<li> <b>A Tool for Rewriting-Based Enforcement of Noninterference in While Programs</b>, <em>Bachelor's thesis</em>, 2015 [<a href="https://github.com/smahmadpanah/BScProject/blob/master/Final%20Documents/Thesis.pdf">pdf</a>] [<a href="https://github.com/smahmadpanah/BScProject">link</a>]
-<br>Supervisor: Mehran S. Fallah, Opponent: MohammadReza Razzazi
+<li> <b>Ni(OH)<sub>2</sub> microspheres in situ self-grown on ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> as a heterojunction electrocatalyst for oxygen evolution reaction</b>, <em>Electrochimica Acta</em>, 400 (2021) 139473 [[pdf](/files/publications/1.pdf)] 
 <div class='button' data-content="toggle-text"><a href="#1">abstract</a></div>
 <div class='abstract'>
-  Program rewriting has recently been suggested as a means of enforcing security
-policies and proven more powerful than execution monitoring and static analysis.
-We implement a novel, sound and transparent rewriting mechanism
-using Program Dependence Graphs (PDG) to enforce progress-sensitive and -insensitive noninterference in programs with observable intermediate values.
+Oxygen evolution reaction (OER), as a part reaction of the overall water splitting, is deemed as a prospective technology for large-scale energy storage. However, the sluggish kinetics (large overpotential) and the expensive cost of noble metal-based electrocatalysts (RuO<sub>2</sub> and IrO<sub>2</sub>) restrain the widespread usage of OER. Hence, the discovery of non-precious metal-based electrocatalysts with tiny overpotential, satisfactory current density and outstanding stability has become urgent. 
+<p style="margin-top: -0.1%;">
+In this work, we have prepared ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> by a two-step thermal peeling method and synthesized Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> com<sup></sup>posite by a simple one-step solvothermal method. Benefiting from the layered g-C<sub>3</sub>N<sub>4</sub> as substrate, the overpotential of Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> composite was just 240 mV at 10 mA cm<sup>−2</sup>, which gives an unexpected improvement in the electrochemical performance of the composite samples compared to pure Ni(OH)<sub>2</sub> (η = 460 mV). Additionally, the formation of heterojunction effectively reduces the resistance to electron transport in OER, the resistance of Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> (Rct = 38.8 ) is far smaller than those of bare Ni(OH)<sub>2</sub> (Rct = 41.6 ) and layered g-C<sub>3</sub>N<sub>4</sub> (Rct = 43.6 ) at the open circuit potential. Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> composite samples display outstanding electrochemical stability, maintaining 85% of initial current density for 12 h. 
+<p style="margin-top: -2.5%;">
+Moreover, density functional theory (DFT) demonstrates that G3 of Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite (η = 0.46 V) is much lower than that of bare Ni(OH)<sub>2</sub> (η = 0.64 V). These undeniable results demonstrate that Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite materials is promising alternative materials to replace precious metal-based OER electrocatalysts in the field of water splitting
 </div></li></div>
 </ol>
 
