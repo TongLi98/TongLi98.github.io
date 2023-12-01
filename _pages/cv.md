@@ -5,4 +5,4 @@ permalink: /cv/
 author_profile: true
 ---
 
-- CV - November 2023 [[pdf](/files/CV_Nov2023.pdf)] 
+- CV - November 2023 [[PDF](/files/CV_Nov2023.pdf)] 
