@@ -52,7 +52,7 @@ Thanks to its optimized performance, the best efficiency of the Yb<sup>3+</sup>-
 
 
 <div id="3">
-<li> <b>Bimetallic Ni-Hf Tellurides as an Advanced Electrocatalyst for Overall Water Splitting with Layered g-C<sub>3</sub>N<sub>4</sub> Modification</b>, <em>Materials Today Energy</em>, 26 (2022) 101002 
+<li> <b>Bimetallic Ni-Hf tellurides as an advanced electrocatalyst for overall water splitting with layered g-C<sub>3</sub>N<sub>4</sub> modification</b>, <em>Materials Today Energy</em>, 26 (2022) 101002 
 <div class='button' data-content="toggle-text"><a href="#3">abstract</a></div>
 <div class='abstract'>
 Impressive developments have been achieved in the field of bifunctional electrocatalysts for the overall water splitting in alkaline and weak alkaline electrolytes, but still challenging. Herein, we have coupled the early and later transition metals to form novel bimetallic tellurides electrocatalyst for overall water splitting by simple one-step hydrothermal. 
@@ -63,7 +63,7 @@ This work provides a novel strategy for the design of bifunctional transition me
 
 
 <div id="2'">
-<li> <b>3D Nanostructured Nickel Hydroxide as An Efficient Electrocatalyst for Oxygen Evolution Reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 
+<li> <b>3D nanostructured nickel hydroxide as an efficient electrocatalyst for oxygen evolution reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 
 <div class='button' data-content="toggle-text"><a href="#2'">abstract</a></div>
 <div class='abstract'>
 The exploration of high-efficiency and reliable non-precious metal electrocatalysts for overall water splitting is greatly vital and challenging for scientists to explore the physical structure effects with OER catalysts. Herein, we firstly developed three-dimensional ɑlpha-Nickel hydroxide as an advantageous electrocatalyst towards OER by a simple solvothermal method. 
@@ -80,7 +80,7 @@ By comparing three Ni(OH)<sub>2</sub> samples, this work provides the new single
 <div class='abstract'>
 Oxygen evolution reaction (OER), as a part reaction of the overall water splitting, is deemed as a prospective technology for large-scale energy storage. However, the sluggish kinetics (large overpotential) and the expensive cost of noble metal-based electrocatalysts (RuO<sub>2</sub> and IrO<sub>2</sub>) restrain the widespread usage of OER. Hence, the discovery of non-precious metal-based electrocatalysts with tiny overpotential, satisfactory current density and outstanding stability has become urgent. 
 <p style="margin-top: -0.1%;">
-In this work, we have prepared ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> by a two-step thermal peeling method and synthesized Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> com<sup></sup>posite by a simple one-step solvothermal method. Benefiting from the layered g-C<sub>3</sub>N<sub>4</sub> as substrate, the overpotential of Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> composite was just 240 mV at 10 mA cm<sup>−2</sup>, which gives an unexpected improvement in the electrochemical performance of the composite samples compared to pure Ni(OH)<sub>2</sub> (η = 460 mV). Additionally, the formation of heterojunction effectively reduces the resistance to electron transport in OER, the resistance of Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> (Rct = 38.8 ) is far smaller than those of bare Ni(OH)<sub>2</sub> (Rct = 41.6 ) and layered g-C<sub>3</sub>N<sub>4</sub> (Rct = 43.6 ) at the open circuit potential. Ni(OH)2/g-C<sub>3</sub>N<sub>4</sub> composite samples display outstanding electrochemical stability, maintaining 85% of initial current density for 12 h. 
+In this work, we have prepared ultra-thin layered g-C<sub>3</sub>N<sub>4</sub> by a two-step thermal peeling method and synthesized Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> com<sup></sup>posite by a simple one-step solvothermal method. Benefiting from the layered g-C<sub>3</sub>N<sub>4</sub> as substrate, the overpotential of Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite was just 240 mV at 10 mA cm<sup>−2</sup>, which gives an unexpected improvement in the electrochemical performance of the composite samples compared to pure Ni(OH)<sub>2</sub> (η = 460 mV). Additionally, the formation of heterojunction effectively reduces the resistance to electron transport in OER, the resistance of Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> (Rct = 38.8 ) is far smaller than those of bare Ni(OH)<sub>2</sub> (Rct = 41.6 ) and layered g-C<sub>3</sub>N<sub>4</sub> (Rct = 43.6 ) at the open circuit potential. Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite samples display outstanding electrochemical stability, maintaining 85% of initial current density for 12 h. 
 <p style="margin-top: -2.5%;">
 Moreover, density functional theory (DFT) demonstrates that G3 of Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite (η = 0.46 V) is much lower than that of bare Ni(OH)<sub>2</sub> (η = 0.64 V). These undeniable results demonstrate that Ni(OH)<sub>2</sub>/g-C<sub>3</sub>N<sub>4</sub> composite materials is promising alternative materials to replace precious metal-based OER electrocatalysts in the field of water splitting
 
