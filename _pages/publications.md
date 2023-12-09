@@ -29,7 +29,7 @@ author_profile: true
 <ol reversed>
 
 <div id="5">
-<li> <b>Cobalt single atom anchored on N-doped carbon nanoboxes as typical single-atom catalysts (SACs) for boosting the overall water splitting</b>,  <em>Chemical Engineering Journal</em>, 458 (2023) 141435 <a href="/files/5.pdf">[PDF]</a>
+<li> <b>Cobalt single atom anchored on N-doped carbon nanoboxes as typical single-atom catalysts (SACs) for boosting the overall water splitting</b>,  <em>Chemical Engineering Journal</em>, 458 (2023) 141435 <a href="/files/5.pdf">[PDF]</a> Highly Cited Paper
 
 <div class='button' data-content="toggle-text"><a href="#4">abstract</a></div>
 <div class='abstract'>
@@ -64,7 +64,7 @@ This work provides a novel strategy for the design of bifunctional transition me
 
 
 <div id="2'">
-<li> <b>3D nanostructured nickel hydroxide as an efficient electrocatalyst for oxygen evolution reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 <a href="/files/2.pdf">[PDF]</a>
+<li> <b>3D nanostructured nickel hydroxide as an efficient electrocatalyst for oxygen evolution reaction</b>, <em>Electrocatalysis</em>, 6 (2022) 873-886 <a href="/files/2.pdf">[PDF]</a> Cover Paper
 <div class='button' data-content="toggle-text"><a href="#2'">abstract</a></div>
 <div class='abstract'>
 The exploration of high-efficiency and reliable non-precious metal electrocatalysts for overall water splitting is greatly vital and challenging for scientists to explore the physical structure effects with OER catalysts. Herein, we firstly developed three-dimensional ɑlpha-Nickel hydroxide as an advantageous electrocatalyst towards OER by a simple solvothermal method. 
