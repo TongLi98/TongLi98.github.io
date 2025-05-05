@@ -7,7 +7,10 @@ author_profile: true
 
 
 <ul>
-<li> Table tennis</li>
+<li> Tennis</li>
+
+<li> Hiking</li>
+<li>Skiing</li>
 
 <li> Fitness</li>
 
