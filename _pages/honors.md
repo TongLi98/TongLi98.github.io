@@ -7,6 +7,7 @@ author_profile: true
 
 
 <ul>
+<li> FRQ scholarship, Canada, 2025.04</li>
 <li> <b>Shanghai</b> Outstanding Graduate Student, China, 2023.03</li>
 
 <li> Outstanding Graduate Students at <b>University Level</b>, China, 2023.03</li>
