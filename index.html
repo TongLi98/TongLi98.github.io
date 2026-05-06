@@ -3,82 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TongLi98 | Website</title>
+    <title>TongLi98 | Personal Website</title>
     <meta
       name="description"
-      content="TongLi98 的简约个人网站，展示个人简介、项目和联系方式。"
+      content="TongLi98 的个人网站，展示个人简介、项目作品、经历和联系方式。"
     />
+    <meta property="og:title" content="TongLi98 | Personal Website" />
+    <meta
+      property="og:description"
+      content="一个清晰、轻量、可直接部署到 GitHub Pages 的个人主页。"
+    />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand" href="#top">TongLi98</a>
+        <a class="brand" href="#top" aria-label="回到首页">
+          <span class="brand-mark">TL</span>
+          <span>TongLi98</span>
+        </a>
         <nav class="site-nav" aria-label="主导航">
-          <a href="#about">关于我</a>
+          <a href="#about">关于</a>
           <a href="#projects">项目</a>
-          <a href="#story">经历</a>
+          <a href="#timeline">经历</a>
           <a href="#contact">联系</a>
         </nav>
       </header>
 
       <main id="top">
         <section class="hero reveal">
-          <p class="eyebrow">Personal Website</p>
-          <h1>你好，我是 TongLi98。</h1>
-          <p class="hero-copy">
-            一个简约、清晰、轻量的个人网站。
-            用来介绍我是谁、我在做什么，以及我想做成什么样的作品。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">查看项目</a>
-            <a class="button button-secondary" href="#contact">联系我</a>
+          <div class="hero-copy-wrap">
+            <p class="eyebrow">Personal Website</p>
+            <h1>你好，我是 TongLi98。</h1>
+            <p class="hero-copy">
+              我在这里整理自己的作品、想法和成长轨迹。这个网站会保持简洁、耐看、好维护，
+              也方便之后继续加入项目案例、简历和博客。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">查看作品</a>
+              <a class="button button-secondary" href="https://github.com/TongLi98" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
           </div>
-          <ul class="hero-metrics" aria-label="亮点">
-            <li>
-              <strong>Focus</strong>
-              <span>清晰表达个人定位</span>
-            </li>
-            <li>
-              <strong>Design</strong>
-              <span>简洁克制的页面风格</span>
-            </li>
-            <li>
-              <strong>Build</strong>
-              <span>直接部署到 GitHub Pages</span>
-            </li>
-          </ul>
+
+          <aside class="profile-card" aria-label="个人资料卡">
+            <img
+              src="https://github.com/TongLi98.png"
+              alt="TongLi98 的 GitHub 头像"
+              class="avatar"
+              width="144"
+              height="144"
+            />
+            <div>
+              <p class="profile-label">Currently building</p>
+              <h2>个人品牌主页</h2>
+              <p>
+                用一个稳定的 GitHub Pages 站点承接自我介绍、项目展示和未来内容。
+              </p>
+            </div>
+          </aside>
         </section>
 
         <section class="about reveal" id="about">
           <div class="section-heading">
             <p class="eyebrow">About</p>
-            <h2>用最少的话，说清楚你是谁。</h2>
+            <h2>把复杂想法整理成清楚、自然、可落地的东西。</h2>
           </div>
           <div class="about-grid">
-            <article class="card intro-card">
+            <article class="intro-panel">
               <p>
-                我关注产品体验、界面细节和实现质量，希望把复杂的想法整理成自然、易用、耐看的结果。
+                这里可以放你的真实简介：你是谁、在学什么或做什么、关注什么方向、希望别人通过这个网站记住什么。
               </p>
               <p>
-                这个版本先保持简约结构，后面可以继续替换成你的真实经历、项目和表达方式。
+                目前我先放了一个通用但不空泛的版本，适合上线。等你给我更具体的信息，我可以再改成更像你的语气。
               </p>
             </article>
-            <article class="card">
-              <h3>方向</h3>
-              <ul>
-                <li>Web 开发</li>
-                <li>产品展示</li>
-                <li>个人网站设计</li>
-              </ul>
+            <article class="info-tile">
+              <span>方向</span>
+              <strong>Web / Product / Portfolio</strong>
             </article>
-            <article class="card">
-              <h3>偏好</h3>
-              <ul>
-                <li>简洁的界面</li>
-                <li>自然的交互</li>
-                <li>长期可维护的代码</li>
-              </ul>
+            <article class="info-tile">
+              <span>风格</span>
+              <strong>简洁、清晰、长期可维护</strong>
+            </article>
+            <article class="info-tile">
+              <span>站点</span>
+              <strong>GitHub Pages 静态部署</strong>
             </article>
           </div>
         </section>
@@ -86,50 +98,62 @@
         <section class="projects reveal" id="projects">
           <div class="section-heading">
             <p class="eyebrow">Projects</p>
-            <h2>挑几个最能代表你的作品。</h2>
+            <h2>精选项目</h2>
           </div>
           <div class="project-list">
             <article class="project-card">
-              <p class="project-index">01</p>
-              <h3>Portfolio Website</h3>
+              <div class="project-meta">
+                <span>01</span>
+                <span>Website</span>
+              </div>
+              <h3>Personal Website</h3>
               <p>
-                一个轻量、响应式、适合长期维护的个人主页，用最简洁的结构表达个人信息。
+                当前这个个人主页：响应式布局、清晰内容结构、滚动出现动效，并可直接发布到 GitHub Pages。
               </p>
+              <a href="https://github.com/TongLi98/TongLi98.github.io" target="_blank" rel="noreferrer">查看仓库</a>
             </article>
             <article class="project-card">
-              <p class="project-index">02</p>
-              <h3>Featured Project</h3>
+              <div class="project-meta">
+                <span>02</span>
+                <span>Featured</span>
+              </div>
+              <h3>代表项目</h3>
               <p>
-                这里可以替换成你的代表项目，写清楚它解决的问题、你的角色，以及最终效果。
+                这里后续替换成你的作品：项目背景、你负责的部分、用了什么技术、最终解决了什么问题。
               </p>
+              <a href="#contact">补充内容</a>
             </article>
             <article class="project-card">
-              <p class="project-index">03</p>
-              <h3>Next Step</h3>
+              <div class="project-meta">
+                <span>03</span>
+                <span>Next</span>
+              </div>
+              <h3>下一步计划</h3>
               <p>
-                也可以放你正在计划的内容，让访问者快速理解你接下来想做什么。
+                可以扩展简历下载、博客、摄影集、学习笔记，或者做成中英双语的作品集页面。
               </p>
+              <a href="#timeline">查看规划</a>
             </article>
           </div>
         </section>
 
-        <section class="story reveal" id="story">
+        <section class="timeline-section reveal" id="timeline">
           <div class="section-heading">
-            <p class="eyebrow">Story</p>
-            <h2>经历也可以很简单。</h2>
+            <p class="eyebrow">Timeline</p>
+            <h2>接下来可以这样升级。</h2>
           </div>
           <div class="timeline">
             <article>
-              <span>现在</span>
-              <p>整理自己的线上展示空间，让内容、设计和技术表达保持统一。</p>
+              <span>Now</span>
+              <p>完成个人主页基础版，让网站先能被访问、被分享、被搜索引擎理解。</p>
             </article>
             <article>
-              <span>最近</span>
-              <p>持续优化项目呈现方式，让页面更轻、更稳、更耐看。</p>
+              <span>Next</span>
+              <p>替换真实头像、简介、邮箱、项目链接，把模板语言改成你的个人表达。</p>
             </article>
             <article>
-              <span>下一步</span>
-              <p>逐步加入更多项目案例、简历信息或博客内容。</p>
+              <span>Later</span>
+              <p>加入博客、简历下载、项目详情页或多语言内容，让网站逐渐变成长期资产。</p>
             </article>
           </div>
         </section>
@@ -138,10 +162,10 @@
           <div class="contact-panel">
             <div>
               <p class="eyebrow">Contact</p>
-              <h2>如果你想联系我，欢迎发消息。</h2>
+              <h2>欢迎通过这些方式找到我。</h2>
             </div>
             <div class="contact-links">
-              <a href="mailto:hello@example.com">hello@example.com</a>
+              <a href="mailto:hello@example.com">Email</a>
               <a href="https://github.com/TongLi98" target="_blank" rel="noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
@@ -150,7 +174,7 @@
       </main>
 
       <footer class="site-footer">
-        <p>© <span id="year"></span> TongLi98. Built for GitHub Pages.</p>
+        <p>© <span id="year"></span> TongLi98. Built with care for GitHub Pages.</p>
       </footer>
     </div>
 
