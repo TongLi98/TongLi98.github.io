@@ -45,6 +45,23 @@ a {
   color: var(--black);
 }
 
+sub,
+sup {
+  font-size: 0.7em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  font-feature-settings: "tnum" 1;
+}
+
+sub {
+  bottom: -0.28em;
+}
+
+sup {
+  top: -0.5em;
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
