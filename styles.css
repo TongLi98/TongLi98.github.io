@@ -284,6 +284,8 @@ h1 {
 .stats article {
   padding: 28px 22px;
   text-align: center;
+  background: var(--soft);
+  transition: background-color 0.22s ease, color 0.22s ease;
 }
 
 .stats article + article {
@@ -302,6 +304,17 @@ h1 {
   margin-top: 8px;
   color: var(--muted);
   font-size: 0.96rem;
+  transition: color 0.22s ease;
+}
+
+.stats article:hover {
+  color: #fff;
+  background: var(--blue);
+}
+
+.stats article:hover strong,
+.stats article:hover span {
+  color: #fff;
 }
 
 .section,
@@ -355,6 +368,7 @@ h1 {
 .publication,
 .timeline article,
 .honors-panel {
+  border: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: var(--radius);
 }
 
@@ -362,13 +376,13 @@ h1 {
   min-height: 330px;
   padding: 28px;
   background: var(--soft);
+  transition: background-color 0.22s ease, color 0.22s ease,
+    transform 0.22s ease;
 }
 
 .dark-card {
-  color: #fff;
-  background:
-    linear-gradient(150deg, rgba(0, 113, 227, 0.9), rgba(110, 76, 245, 0.86)),
-    var(--blue);
+  color: var(--ink);
+  background: var(--soft);
 }
 
 .feature-card span,
@@ -377,11 +391,12 @@ h1 {
   color: var(--blue);
   font-size: 0.84rem;
   font-weight: 760;
+  transition: color 0.22s ease;
 }
 
 .dark-card span,
 .dark-card p {
-  color: rgba(255, 255, 255, 0.76);
+  color: inherit;
 }
 
 .feature-card h3,
@@ -400,6 +415,32 @@ h1 {
   margin: 18px 0 0;
   color: var(--muted);
   line-height: 1.55;
+  transition: color 0.22s ease;
+}
+
+.feature-card:hover,
+.publication:hover,
+.timeline article:hover,
+.honors-panel:hover {
+  color: #fff;
+  border-color: var(--blue);
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+
+.feature-card:hover span,
+.publication:hover span,
+.timeline article:hover span,
+.feature-card:hover h3,
+.publication:hover h3,
+.timeline article:hover h3,
+.feature-card:hover p,
+.publication:hover p,
+.timeline article:hover p,
+.honors-panel:hover h2,
+.honors-panel:hover .section-kicker,
+.honors-panel:hover .clean-list li {
+  color: #fff;
 }
 
 .publication-list {
@@ -410,7 +451,9 @@ h1 {
 
 .publication {
   padding: 26px 28px;
-  background: #fff;
+  background: var(--soft);
+  transition: background-color 0.22s ease, color 0.22s ease,
+    transform 0.22s ease;
 }
 
 .publication h3 {
@@ -428,8 +471,11 @@ h1 {
   grid-template-columns: 170px minmax(0, 0.85fr) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
-  padding: 28px 0;
+  padding: 28px;
   border-top: 1px solid var(--hairline);
+  background: var(--soft);
+  transition: background-color 0.22s ease, color 0.22s ease,
+    transform 0.22s ease;
 }
 
 .timeline article:last-child {
@@ -453,10 +499,10 @@ h1 {
 
 .honors-panel {
   padding: 34px;
-  color: #fff;
-  background:
-    radial-gradient(circle at 22% 16%, rgba(255, 255, 255, 0.2), transparent 28%),
-    linear-gradient(140deg, #111318, #2c2f36);
+  color: var(--ink);
+  background: var(--soft);
+  transition: background-color 0.22s ease, color 0.22s ease,
+    transform 0.22s ease;
 }
 
 .white-panel {
