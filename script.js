@@ -36,9 +36,15 @@ document.addEventListener("click", (event) => {
   if (!event.composedPath().includes(header) && menu.getAttribute("aria-expanded") === "true") setMenu(false);
 });
 mobileLayout.addEventListener("change", () => setMenu(false));
-const updateHeader = () => header.classList.toggle("is-scrolled", scrollY > 12);
+const progress = document.querySelector(".reading-progress");
+const updateHeader = () => {
+  header.classList.toggle("is-scrolled", scrollY > 12);
+  const range = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  progress.style.transform = `scaleX(${Math.min(1, scrollY / range)})`;
+};
 updateHeader();
 addEventListener("scroll", updateHeader, { passive: true });
+addEventListener("resize", updateHeader);
 
 // Content stays visible without JavaScript; only entering items receive animation.
 const motion = gsap.matchMedia();
@@ -84,10 +90,10 @@ function initializeMolecules() {
     return;
   }
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
-  renderer.setClearColor(0xf5f5f7, 0);
+  renderer.setClearColor(0x0b1012, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.2;
+  renderer.toneMappingExposure = 1.15;
   renderer.domElement.setAttribute("aria-hidden", "true");
   container.append(renderer.domElement);
   container.classList.add("scene-ready");
@@ -97,11 +103,11 @@ function initializeMolecules() {
   camera.position.set(0, 4.2, 11);
   camera.lookAt(0, .2, 0);
 
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x737b89, 3));
-  const key = new THREE.DirectionalLight(0xffffff, 5);
+  scene.add(new THREE.HemisphereLight(0xdbffff, 0x20292b, 2.8));
+  const key = new THREE.DirectionalLight(0xffffff, 4);
   key.position.set(-3, 7, 4);
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0xc4dcff, 3);
+  const rim = new THREE.DirectionalLight(0x5cffd2, 3);
   rim.position.set(4, 2, -3);
   scene.add(rim);
 
@@ -109,11 +115,11 @@ function initializeMolecules() {
   scene.add(model);
   const sphere = new THREE.SphereGeometry(1, 28, 20);
   const bondShape = new THREE.CylinderGeometry(1, 1, 1, 12);
-  const silver = new THREE.MeshStandardMaterial({ color: 0xb5bbc4, metalness: .68, roughness: .26 });
-  const blue = new THREE.MeshStandardMaterial({ color: 0x0071e3, metalness: .48, roughness: .23 });
-  const carbon = new THREE.MeshStandardMaterial({ color: 0x33343a, metalness: .4, roughness: .25 });
-  const oxygen = new THREE.MeshStandardMaterial({ color: 0xe4474a, metalness: .18, roughness: .28 });
-  const bondMaterial = new THREE.MeshStandardMaterial({ color: 0xaeb5c0, metalness: .65, roughness: .32 });
+  const silver = new THREE.MeshStandardMaterial({ color: 0x20828b, metalness: .6, roughness: .3 });
+  const blue = new THREE.MeshStandardMaterial({ color: 0x6affe0, emissive: 0x20b5a6, emissiveIntensity: .24, metalness: .4, roughness: .23 });
+  const carbon = new THREE.MeshStandardMaterial({ color: 0xe1e5e8, metalness: .6, roughness: .2 });
+  const oxygen = new THREE.MeshStandardMaterial({ color: 0xff536b, metalness: .22, roughness: .25 });
+  const bondMaterial = new THREE.MeshStandardMaterial({ color: 0x82aaa9, metalness: .65, roughness: .32 });
 
   const atom = (group, position, radius, material) => {
     const mesh = new THREE.Mesh(sphere, material);
@@ -159,6 +165,61 @@ function initializeMolecules() {
   molecule.rotation.set(.1, .25, -.14);
   model.rotation.y = -.2;
 
+  const floor = new THREE.GridHelper(9, 18, 0x315559, 0x1d363a);
+  floor.position.y = -.82;
+  floor.material.transparent = true;
+  floor.material.opacity = .55;
+  model.add(floor);
+
+  const lenses = Object.fromEntries(["light", "plasma", "carbon", "data"].map(name => {
+    const group = new THREE.Group();
+    group.visible = name === "carbon";
+    model.add(group);
+    return [name, group];
+  }));
+  const trace = (group, points, color, dashed = false) => {
+    const geometry = new THREE.BufferGeometry().setFromPoints(points.map(point => new THREE.Vector3(...point)));
+    const options = { color, transparent: true, opacity: .8 };
+    const material = dashed ? new THREE.LineDashedMaterial({ ...options, dashSize: .1, gapSize: .06 }) : new THREE.LineBasicMaterial(options);
+    const line = new THREE.Line(geometry, material);
+    if (dashed) line.computeLineDistances();
+    group.add(line);
+    return line;
+  };
+
+  // Each lens is a conceptual visual vocabulary, without calculated scientific values.
+  const photonPoints = Array.from({ length: 110 }, (_, index) => {
+    const t = index / 109;
+    return [-3.3 + t * 3.2, 1.5 - t * 1.7 + Math.sin(t * Math.PI * 12) * .11, .2];
+  });
+  const photon = new THREE.Mesh(
+    new THREE.TubeGeometry(new THREE.CatmullRomCurve3(photonPoints.map(p => new THREE.Vector3(...p))), 110, .018, 6, false),
+    new THREE.MeshBasicMaterial({ color: 0xf6bf57 }),
+  );
+  lenses.light.add(photon);
+  for (let strand = 0; strand < 3; strand++) {
+    const points = Array.from({ length: 32 }, (_, index) => {
+      const t = index / 31;
+      return [-3 + t * 6, .55 + strand * .32 + Math.sin(index * 2.1 + strand) * .18, -.5];
+    });
+    trace(lenses.plasma, points, strand === 1 ? 0xffba82 : 0xf47b93);
+  }
+  trace(lenses.carbon, [[.18, -.3, -.3], [.3, .35, 0], [0, .75, 0]], 0x42d5dc, true);
+  for (let index = 0; index < 5; index++) {
+    const x = (index - 2) * 1.2;
+    trace(lenses.data, [[x, -.2, .7], [x + .35, .55, -.3], [0, .8, 0]], 0x67ddb1, true);
+  }
+  const controls = document.querySelector(".scene-controls");
+  const hero = document.querySelector(".hero");
+  const topic = document.querySelector("#scene-topic");
+  const lensLabels = {
+    light: "Photocatalysis / Concept model",
+    plasma: "Plasma catalysis / Concept model",
+    carbon: "CO2 utilization / Concept model",
+    data: "Machine learning / Concept model",
+  };
+  const lensColors = { light: 0xf6bf57, plasma: 0xf47b93, carbon: 0x6affe0, data: 0x67ddb1 };
+
   let frame = 0;
   let inView = false;
   let contextLost = false;
@@ -176,6 +237,11 @@ function initializeMolecules() {
     model.rotation.x = pointer.y * .06;
     molecule.position.y = 1.15 + (moving ? Math.sin(elapsed * .9) * .09 : 0);
     molecule.rotation.y = .25 + (moving ? Math.sin(elapsed * .45) * .2 : 0);
+    photon.material.color.setHex(0xf6bf57).multiplyScalar(moving ? .92 + Math.sin(elapsed * 2) * .08 : 1);
+    lenses.plasma.children.forEach((line, index) => {
+      line.material.opacity = moving ? .65 + Math.sin(elapsed * 2 + index) * .18 : .8;
+    });
+    blue.emissiveIntensity = moving ? .22 + Math.sin(elapsed * 1.2) * .1 : .22;
     renderer.render(scene, camera);
     if (moving) frame = requestAnimationFrame(render);
   };
@@ -184,13 +250,26 @@ function initializeMolecules() {
     previousTime = 0;
     render();
   };
+  controls.disabled = false;
+  controls.addEventListener("change", (event) => {
+    const name = event.target.value;
+    if (!Object.hasOwn(lenses, name)) return;
+    hero.dataset.lens = name;
+    topic.textContent = lensLabels[name];
+    container.setAttribute("aria-label", `Conceptual three-dimensional ${lensLabels[name].split(" / ")[0]} illustration above a catalyst surface`);
+    Object.entries(lenses).forEach(([key, group]) => { group.visible = key === name; });
+    blue.color.setHex(lensColors[name]);
+    blue.emissive.setHex(lensColors[name]);
+    silver.color.setHex(name === "data" ? 0x26745f : name === "plasma" ? 0x866174 : 0x20828b);
+    resume();
+  });
   const resize = () => {
     const { width, height } = container.getBoundingClientRect();
     renderer.setSize(width, height);
     camera.aspect = width / height;
     // Frame the complete model even on narrow screens.
     const verticalFov = THREE.MathUtils.degToRad(camera.fov);
-    const distance = Math.max(7.2, 7.6 / (2 * Math.tan(verticalFov / 2) * camera.aspect));
+    const distance = Math.max(7.2, 9.5 / (2 * Math.tan(verticalFov / 2) * camera.aspect));
     camera.position.set(0, distance * .35, distance);
     camera.lookAt(0, .25, 0);
     camera.updateProjectionMatrix();
@@ -220,14 +299,71 @@ function initializeMolecules() {
     contextLost = true;
     cancelAnimationFrame(frame);
     container.classList.remove("scene-ready");
+    controls.disabled = true;
     renderer.domElement.hidden = true;
   });
   renderer.domElement.addEventListener("webglcontextrestored", () => {
     contextLost = false;
     container.classList.add("scene-ready");
+    controls.disabled = false;
     renderer.domElement.hidden = false;
     resume();
   });
   resize();
 }
 initializeMolecules();
+
+function drawResearchDiagrams() {
+  document.querySelectorAll(".research-diagram").forEach(canvas => {
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    const line = (points, color, width = 2) => {
+      context.beginPath();
+      context.strokeStyle = color;
+      context.lineWidth = width;
+      points.forEach(([x, y], index) => index ? context.lineTo(x, y) : context.moveTo(x, y));
+      context.stroke();
+    };
+    const circle = (x, y, radius, color) => {
+      context.beginPath();
+      context.arc(x, y, radius, 0, Math.PI * 2);
+      context.fillStyle = color;
+      context.fill();
+    };
+    context.lineCap = "round";
+    const name = canvas.dataset.diagram;
+    if (name === "light") {
+      line([[12, 80], [388, 80]], "#d8d9df", 1);
+      [35, 80, 125].forEach(y => line([[12, y], [388, y]], "#d8d9df", 1));
+      const points = Array.from({ length: 180 }, (_, i) => [12 + i * 2.1, 80 + Math.sin(i / 10) * 32]);
+      line(points, "#b88317", 4);
+      line([[325, 27], [364, 27], [364, 55]], "#b88317", 2);
+    } else if (name === "plasma") {
+      line([[24, 28], [24, 130]], "#a5acb3", 5);
+      line([[376, 28], [376, 130]], "#a5acb3", 5);
+      [0, 1, 2].forEach(strand => {
+        const points = Array.from({ length: 35 }, (_, i) => [26 + i * 10.2, 53 + strand * 29 + Math.sin(i * 1.3 + strand) * 13]);
+        line(points, strand === 1 ? "#ce466b" : "#d6a3b8", strand === 1 ? 4 : 2);
+      });
+    } else if (name === "carbon") {
+      [73, 87].forEach(y => line([[86, y], [314, y]], "#54868b", 3));
+      [[80, "O", "#c94e69"], [200, "C", "#147d86"], [320, "O", "#c94e69"]].forEach(([x, label, color]) => {
+        circle(x, 80, 31, color);
+        context.fillStyle = "#fff";
+        context.font = "22px -apple-system, sans-serif";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillText(label, x, 81);
+      });
+    } else {
+      const layers = [[55, [50, 110]], [150, [27, 80, 133]], [250, [27, 80, 133]], [345, [50, 110]]];
+      layers.slice(0, -1).forEach(([x, rows], layer) => {
+        const [nextX, nextRows] = layers[layer + 1];
+        rows.forEach(y => nextRows.forEach(nextY => line([[x, y], [nextX, nextY]], "#a6cdc0", 1.5)));
+      });
+      layers.forEach(([x, rows]) => rows.forEach(y => circle(x, y, 7, "#24885f")));
+      line([[55, 50], [150, 80], [250, 27], [345, 110]], "#24885f", 3);
+    }
+  });
+}
+drawResearchDiagrams();

@@ -23,10 +23,19 @@
 - 四个研究方向分别展示：光催化、等离子体催化、CO2 利用、机器学习。
 - 五篇一作论文的标题和整条记录都能在新标签页打开出版社文章页；DOI 已与出版社或 Crossref 记录核对。
 - 首屏为可随指针轻微转动的 CO2 与催化剂表面概念模型，不代表具体晶体结构或反应模拟。
+- 科技风配色使用石墨黑首屏、青色碳利用、琥珀色光、珊瑚色等离子体、翠绿色数据；正文保持浅色阅读背景。
+- 首屏四个选项可切换光子波形、等离子体线条、碳界面路径和数据网络。控件支持键盘，并在 WebGL 不可用时自动禁用。
+- 研究卡片包含四幅科学概念示意，论文使用期刊色标，导航顶部显示阅读进度。
 - 动画遵循系统减少动态效果设置，模型离开视口或页面进入后台时暂停。
 - 小屏导航支持开关、Escape 和选中链接后关闭。没有 WebGL 时显示分子式备用图。
 
 动效参考了 [Brittany Chiang v4](https://github.com/bchiang7/v4) 的分层入场节奏，以及 [3D Developer Portfolio](https://github.com/adrianhajdin/project_3D_developer_portfolio) 的交互三维场景。本站布局和分子场景独立实现；动画使用 [GSAP](https://github.com/greensock/GSAP)，三维渲染使用 [Three.js](https://github.com/mrdoob/three.js)，图标使用 [Lucide](https://github.com/lucide-icons/lucide)。第三方声明保留在 `assets/site.js.LEGAL.txt` 和 `assets/licenses/`。
+
+2026-09-05 的科技视觉更新还参考了以下热门开源 UI 项目。星标为查询当时的约数；仅借鉴视觉和交互模式，没有引入其 React 运行时或复制组件源码。
+
+- [React Bits](https://github.com/DavidHDev/react-bits)，约 46.8k stars：三维网格、波束与交互背景的视觉思路。
+- [Magic UI](https://github.com/magicuidesign/magicui)，约 22.2k stars：[Animated Beam](https://magicui.design/docs/components/animated-beam) 的连接路径表达。
+- [Uiverse Galaxy](https://github.com/uiverse-io/galaxy)，约 12.4k stars：多色控件状态、边框和轻量 CSS 反馈。
 
 ## 发布
 
