@@ -1,0 +1,49 @@
+Bundled license information:
+
+gsap/gsap-core.js:
+  /*!
+   * GSAP 3.13.0
+   * https://gsap.com
+   *
+   * @license Copyright 2008-2025, GreenSock. All rights reserved.
+   * Subject to the terms at https://gsap.com/standard-license
+   * @author: Jack Doyle, jack@greensock.com
+  */
+
+gsap/CSSPlugin.js:
+  /*!
+   * CSSPlugin 3.13.0
+   * https://gsap.com
+   *
+   * Copyright 2008-2025, GreenSock. All rights reserved.
+   * Subject to the terms at https://gsap.com/standard-license
+   * @author: Jack Doyle, jack@greensock.com
+  */
+
+three/build/three.core.js:
+three/build/three.module.js:
+  /**
+   * @license
+   * Copyright 2010-2025 Three.js Authors
+   * SPDX-License-Identifier: MIT
+   */
+
+lucide/dist/esm/createElement.js:
+lucide/dist/esm/replaceElement.js:
+lucide/dist/esm/defaultAttributes.js:
+lucide/dist/esm/icons/arrow-down.js:
+lucide/dist/esm/icons/arrow-up-right.js:
+lucide/dist/esm/icons/arrow-up.js:
+lucide/dist/esm/icons/atom.js:
+lucide/dist/esm/icons/menu.js:
+lucide/dist/esm/icons/network.js:
+lucide/dist/esm/icons/sun.js:
+lucide/dist/esm/icons/x.js:
+lucide/dist/esm/icons/zap.js:
+lucide/dist/esm/lucide.js:
+  /**
+   * @license lucide v0.468.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   */
