@@ -4,6 +4,11 @@ import { createIcons, createElement, Menu, X, ArrowUpRight, ArrowUp, ArrowDown, 
 
 createIcons({ icons: { Menu, X, ArrowUpRight, ArrowUp, ArrowDown, Sun, Zap, Atom, Network } });
 
+// Share the palette with the controls so every model mode stays visually consistent.
+const theme = getComputedStyle(document.documentElement);
+const researchColors = Object.fromEntries(["light", "plasma", "carbon", "data"].map(name => [name, theme.getPropertyValue(`--${name}`).trim()]));
+const researchInk = Object.fromEntries(["light", "plasma", "carbon", "data"].map(name => [name, theme.getPropertyValue(`--${name}-ink`).trim()]));
+
 const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
 const year = document.querySelector("#year");
@@ -90,10 +95,10 @@ function initializeMolecules() {
     return;
   }
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
-  renderer.setClearColor(0x0b1012, 0);
+  renderer.setClearColor(theme.getPropertyValue("--graphite").trim(), 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.15;
+  renderer.toneMappingExposure = 1.05;
   renderer.domElement.setAttribute("aria-hidden", "true");
   container.append(renderer.domElement);
   container.classList.add("scene-ready");
@@ -103,11 +108,11 @@ function initializeMolecules() {
   camera.position.set(0, 4.2, 11);
   camera.lookAt(0, .2, 0);
 
-  scene.add(new THREE.HemisphereLight(0xdbffff, 0x20292b, 2.8));
-  const key = new THREE.DirectionalLight(0xffffff, 4);
+  scene.add(new THREE.HemisphereLight(0xf2f0ed, 0x42464a, 2.2));
+  const key = new THREE.DirectionalLight(0xffffff, 3);
   key.position.set(-3, 7, 4);
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0x5cffd2, 3);
+  const rim = new THREE.DirectionalLight(0xc4ced6, 1.4);
   rim.position.set(4, 2, -3);
   scene.add(rim);
 
@@ -115,11 +120,11 @@ function initializeMolecules() {
   scene.add(model);
   const sphere = new THREE.SphereGeometry(1, 28, 20);
   const bondShape = new THREE.CylinderGeometry(1, 1, 1, 12);
-  const silver = new THREE.MeshStandardMaterial({ color: 0x20828b, metalness: .6, roughness: .3 });
-  const blue = new THREE.MeshStandardMaterial({ color: 0x6affe0, emissive: 0x20b5a6, emissiveIntensity: .24, metalness: .4, roughness: .23 });
-  const carbon = new THREE.MeshStandardMaterial({ color: 0xe1e5e8, metalness: .6, roughness: .2 });
-  const oxygen = new THREE.MeshStandardMaterial({ color: 0xff536b, metalness: .22, roughness: .25 });
-  const bondMaterial = new THREE.MeshStandardMaterial({ color: 0x82aaa9, metalness: .65, roughness: .32 });
+  const surfaceMaterial = new THREE.MeshStandardMaterial({ color: 0x7e9295, metalness: .08, roughness: .64 });
+  const activeMaterial = new THREE.MeshStandardMaterial({ color: researchColors.carbon, emissive: researchColors.carbon, emissiveIntensity: .04, metalness: .06, roughness: .58 });
+  const carbon = new THREE.MeshStandardMaterial({ color: 0xc1c0bd, metalness: .1, roughness: .6 });
+  const oxygen = new THREE.MeshStandardMaterial({ color: theme.getPropertyValue("--molecule-oxygen").trim(), metalness: .05, roughness: .64 });
+  const bondMaterial = new THREE.MeshStandardMaterial({ color: 0x969f9e, metalness: .12, roughness: .58 });
 
   const atom = (group, position, radius, material) => {
     const mesh = new THREE.Mesh(sphere, material);
@@ -147,7 +152,7 @@ function initializeMolecules() {
       const x = (col - 4) * .74 + (row % 2) * .18;
       const z = (row - 1.5) * .65;
       const active = row === 1 && col === 4;
-      atom(surface, [x, -.5, z], active ? .23 : .18, active ? blue : silver);
+      atom(surface, [x, -.5, z], active ? .23 : .18, active ? activeMaterial : surfaceMaterial);
       if (col < 8) bond(surface, [x, -.5, z], [x + .74, -.5, z], .028);
       if (row < 3) bond(surface, [x, -.5, z], [x + (row % 2 ? -.18 : .18), -.5, z + .65], .028);
     }
@@ -165,7 +170,7 @@ function initializeMolecules() {
   molecule.rotation.set(.1, .25, -.14);
   model.rotation.y = -.2;
 
-  const floor = new THREE.GridHelper(9, 18, 0x315559, 0x1d363a);
+  const floor = new THREE.GridHelper(9, 18, 0x69787b, 0x465154);
   floor.position.y = -.82;
   floor.material.transparent = true;
   floor.material.opacity = .55;
@@ -194,7 +199,7 @@ function initializeMolecules() {
   });
   const photon = new THREE.Mesh(
     new THREE.TubeGeometry(new THREE.CatmullRomCurve3(photonPoints.map(p => new THREE.Vector3(...p))), 110, .018, 6, false),
-    new THREE.MeshBasicMaterial({ color: 0xf6bf57 }),
+    new THREE.MeshBasicMaterial({ color: researchColors.light }),
   );
   lenses.light.add(photon);
   for (let strand = 0; strand < 3; strand++) {
@@ -202,12 +207,12 @@ function initializeMolecules() {
       const t = index / 31;
       return [-3 + t * 6, .55 + strand * .32 + Math.sin(index * 2.1 + strand) * .18, -.5];
     });
-    trace(lenses.plasma, points, strand === 1 ? 0xffba82 : 0xf47b93);
+    trace(lenses.plasma, points, strand === 1 ? researchColors.light : researchColors.plasma);
   }
-  trace(lenses.carbon, [[.18, -.3, -.3], [.3, .35, 0], [0, .75, 0]], 0x42d5dc, true);
+  trace(lenses.carbon, [[.18, -.3, -.3], [.3, .35, 0], [0, .75, 0]], researchColors.carbon, true);
   for (let index = 0; index < 5; index++) {
     const x = (index - 2) * 1.2;
-    trace(lenses.data, [[x, -.2, .7], [x + .35, .55, -.3], [0, .8, 0]], 0x67ddb1, true);
+    trace(lenses.data, [[x, -.2, .7], [x + .35, .55, -.3], [0, .8, 0]], researchColors.data, true);
   }
   const controls = document.querySelector(".scene-controls");
   const hero = document.querySelector(".hero");
@@ -218,7 +223,7 @@ function initializeMolecules() {
     carbon: "CO2 utilization / Concept model",
     data: "Machine learning / Concept model",
   };
-  const lensColors = { light: 0xf6bf57, plasma: 0xf47b93, carbon: 0x6affe0, data: 0x67ddb1 };
+  const surfaceColors = { light: 0x969087, plasma: 0x918596, carbon: 0x7e9295, data: 0x8a9785 };
 
   let frame = 0;
   let inView = false;
@@ -237,11 +242,11 @@ function initializeMolecules() {
     model.rotation.x = pointer.y * .06;
     molecule.position.y = 1.15 + (moving ? Math.sin(elapsed * .9) * .09 : 0);
     molecule.rotation.y = .25 + (moving ? Math.sin(elapsed * .45) * .2 : 0);
-    photon.material.color.setHex(0xf6bf57).multiplyScalar(moving ? .92 + Math.sin(elapsed * 2) * .08 : 1);
+    photon.material.color.set(researchColors.light).multiplyScalar(moving ? .96 + Math.sin(elapsed * 2) * .04 : 1);
     lenses.plasma.children.forEach((line, index) => {
       line.material.opacity = moving ? .65 + Math.sin(elapsed * 2 + index) * .18 : .8;
     });
-    blue.emissiveIntensity = moving ? .22 + Math.sin(elapsed * 1.2) * .1 : .22;
+    activeMaterial.emissiveIntensity = moving ? .04 + Math.sin(elapsed * 1.2) * .015 : .04;
     renderer.render(scene, camera);
     if (moving) frame = requestAnimationFrame(render);
   };
@@ -258,9 +263,9 @@ function initializeMolecules() {
     topic.textContent = lensLabels[name];
     container.setAttribute("aria-label", `Conceptual three-dimensional ${lensLabels[name].split(" / ")[0]} illustration above a catalyst surface`);
     Object.entries(lenses).forEach(([key, group]) => { group.visible = key === name; });
-    blue.color.setHex(lensColors[name]);
-    blue.emissive.setHex(lensColors[name]);
-    silver.color.setHex(name === "data" ? 0x26745f : name === "plasma" ? 0x866174 : 0x20828b);
+    activeMaterial.color.set(researchColors[name]);
+    activeMaterial.emissive.set(researchColors[name]);
+    surfaceMaterial.color.setHex(surfaceColors[name]);
     resume();
   });
   const resize = () => {
@@ -332,22 +337,24 @@ function drawResearchDiagrams() {
     };
     context.lineCap = "round";
     const name = canvas.dataset.diagram;
+    const accent = researchInk[name];
     if (name === "light") {
       line([[12, 80], [388, 80]], "#d8d9df", 1);
       [35, 80, 125].forEach(y => line([[12, y], [388, y]], "#d8d9df", 1));
       const points = Array.from({ length: 180 }, (_, i) => [12 + i * 2.1, 80 + Math.sin(i / 10) * 32]);
-      line(points, "#b88317", 4);
-      line([[325, 27], [364, 27], [364, 55]], "#b88317", 2);
+      line(points, accent, 4);
+      line([[325, 27], [364, 27], [364, 55]], accent, 2);
     } else if (name === "plasma") {
       line([[24, 28], [24, 130]], "#a5acb3", 5);
       line([[376, 28], [376, 130]], "#a5acb3", 5);
       [0, 1, 2].forEach(strand => {
         const points = Array.from({ length: 35 }, (_, i) => [26 + i * 10.2, 53 + strand * 29 + Math.sin(i * 1.3 + strand) * 13]);
-        line(points, strand === 1 ? "#ce466b" : "#d6a3b8", strand === 1 ? 4 : 2);
+        line(points, strand === 1 ? accent : researchColors.plasma, strand === 1 ? 4 : 2);
       });
     } else if (name === "carbon") {
-      [73, 87].forEach(y => line([[86, y], [314, y]], "#54868b", 3));
-      [[80, "O", "#c94e69"], [200, "C", "#147d86"], [320, "O", "#c94e69"]].forEach(([x, label, color]) => {
+      [73, 87].forEach(y => line([[86, y], [314, y]], researchColors.carbon, 3));
+      const oxygenInk = theme.getPropertyValue("--oxygen-ink").trim();
+      [[80, "O", oxygenInk], [200, "C", accent], [320, "O", oxygenInk]].forEach(([x, label, color]) => {
         circle(x, 80, 31, color);
         context.fillStyle = "#fff";
         context.font = "22px -apple-system, sans-serif";
@@ -359,10 +366,10 @@ function drawResearchDiagrams() {
       const layers = [[55, [50, 110]], [150, [27, 80, 133]], [250, [27, 80, 133]], [345, [50, 110]]];
       layers.slice(0, -1).forEach(([x, rows], layer) => {
         const [nextX, nextRows] = layers[layer + 1];
-        rows.forEach(y => nextRows.forEach(nextY => line([[x, y], [nextX, nextY]], "#a6cdc0", 1.5)));
+        rows.forEach(y => nextRows.forEach(nextY => line([[x, y], [nextX, nextY]], researchColors.data, 1.5)));
       });
-      layers.forEach(([x, rows]) => rows.forEach(y => circle(x, y, 7, "#24885f")));
-      line([[55, 50], [150, 80], [250, 27], [345, 110]], "#24885f", 3);
+      layers.forEach(([x, rows]) => rows.forEach(y => circle(x, y, 7, accent)));
+      line([[55, 50], [150, 80], [250, 27], [345, 110]], accent, 3);
     }
   });
 }
