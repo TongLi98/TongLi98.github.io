@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#202426" />
     <meta property="og:image" content="https://tongli98.github.io/portrait.png" />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=morandi-1" />
+    <link rel="stylesheet" href="./styles.css?v=research-models-2" />
   </head>
   <body>
     <a class="skip-link" href="#research">Skip to content</a>
@@ -57,13 +57,19 @@
         <div class="molecular-scene" id="molecular-scene" role="img" aria-label="Conceptual three-dimensional model of a carbon dioxide molecule above a catalyst surface">
           <div class="scene-fallback" aria-hidden="true">O<span>=</span>C<span>=</span>O</div>
         </div>
-        <fieldset class="scene-controls" aria-controls="molecular-scene" disabled>
-          <legend class="visually-hidden">Research visualization</legend>
-          <label><input type="radio" name="research-lens" value="light" /><span><i data-lucide="sun"></i>Light</span></label>
-          <label><input type="radio" name="research-lens" value="plasma" /><span><i data-lucide="zap"></i>Plasma</span></label>
-          <label><input type="radio" name="research-lens" value="carbon" checked /><span><i data-lucide="atom"></i>Carbon</span></label>
-          <label><input type="radio" name="research-lens" value="data" /><span><i data-lucide="network"></i>Data</span></label>
-        </fieldset>
+        <div class="scene-toolbar">
+          <fieldset class="scene-controls" aria-controls="molecular-scene" disabled>
+            <legend class="visually-hidden">Research visualization</legend>
+            <label><input type="radio" name="research-lens" value="light" /><span><i data-lucide="sun"></i>Light</span></label>
+            <label><input type="radio" name="research-lens" value="plasma" /><span><i data-lucide="zap"></i>Plasma</span></label>
+            <label><input type="radio" name="research-lens" value="carbon" checked /><span><i data-lucide="atom"></i>Carbon</span></label>
+            <label><input type="radio" name="research-lens" value="data" /><span><i data-lucide="network"></i>Data</span></label>
+          </fieldset>
+          <div class="scene-actions" role="group" aria-label="Model controls">
+            <button class="scene-pause" type="button" aria-label="Pause animation" aria-controls="molecular-scene" title="Pause animation" data-tooltip="Pause animation" disabled><i data-lucide="pause"></i></button>
+            <button class="scene-reset" type="button" aria-label="Reset view" aria-controls="molecular-scene" title="Reset view" data-tooltip="Reset view" disabled><i data-lucide="rotate-ccw"></i></button>
+          </div>
+        </div>
         <div class="hero-caption"><span>Materials. Molecules. New possibilities.</span><span id="scene-topic" aria-live="polite">CO<sub>2</sub> utilization / Concept model</span></div>
       </section>
 
@@ -493,6 +499,6 @@
       <a href="#top" class="text-link">Back to top <i data-lucide="arrow-up"></i></a>
     </footer>
 
-    <script defer src="./assets/site.js?v=morandi-1"></script>
+    <script defer src="./assets/site.js?v=research-models-2"></script>
   </body>
 </html>

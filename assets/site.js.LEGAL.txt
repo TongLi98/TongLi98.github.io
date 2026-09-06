@@ -37,6 +37,9 @@ lucide/dist/esm/icons/arrow-up.js:
 lucide/dist/esm/icons/atom.js:
 lucide/dist/esm/icons/menu.js:
 lucide/dist/esm/icons/network.js:
+lucide/dist/esm/icons/pause.js:
+lucide/dist/esm/icons/play.js:
+lucide/dist/esm/icons/rotate-ccw.js:
 lucide/dist/esm/icons/sun.js:
 lucide/dist/esm/icons/x.js:
 lucide/dist/esm/icons/zap.js:
